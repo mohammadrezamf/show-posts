@@ -24,10 +24,12 @@ function Post({ post }) {
     >
       <div className="p-4">
         <h6 className="text-lg font-bold">id: {id}</h6>
-        <h6 className="text-lg font-bold mb-4">
-          title: {trimString(title, 10)}
-        </h6>
-        <p className="text-sm">description: {trimString(body, 20)}</p>
+        {title && (
+          <h6 className="text-lg font-bold mb-4">
+            title: {trimString(title, 10)}
+          </h6>
+        )}
+        {body && <p className="text-sm">description: {trimString(body, 20)}</p>}
       </div>
       <div className="p-4">
         <button
