@@ -86,10 +86,10 @@ function PostList() {
             ) : (
               filteredPosts.map((post) => (
                 <div
-                  key={post.id}
+                  key={post?.id}
                   className="col-span-1"
                   data-cy="post"
-                  data-post-id={post.id}
+                  data-post-id={post?.id}
                 >
                   <PostDetail post={post} />
                 </div>
